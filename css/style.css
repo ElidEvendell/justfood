@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Navigo;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Navigo;
+    src: url(navigo/Navigo-Black.woff2);
+    format: ('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: NavigoBold;
+    src: url(navigo/Navigo-Bold.woff2);
+    format: ('woff2');
+    font-weight: 800;
+}
+
+.header__top__wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #353535;
+    padding: 5px;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    min-width: 1280px;
+}
+
+.header__top ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+.header__bottom__wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.header__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+    min-width: 1280px;
+    align-items: center;
+}
+
+.header__bottom>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    gap: 10px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.callback ul {
+    align-items: center;
+    list-style: none;
+    flex-direction: column;
+}
+
+.callback a {
+    color: #FF5900;
+}
+
+.orderBtn {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 2px 20px;
+    border: none;
+}
+
+.just {
+    color: #DADADA;
+}
+
+.apps {
+    color: #DADADA;
+}
+
+.phone {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header__top img {
+    height: 12px;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    background-image: url('../img/dish.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 580px;
+    height: 580px;
+    
+}
+
+.right {
+    background-color: #E8E7E3;
+    width: 580px;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.basic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 1280px;
+}
+
+.gray {
+    color: #818181;
+}
+
+h2 {
+    word-wrap: normal;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.selectBtn {
+    background-color: #FF5900;
+    color: white;
+    font-size: 20px;
+    padding: 16px 32px;
+    border: none;
+    text-transform: uppercase;
+}
+
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px
+}
