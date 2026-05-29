@@ -121,6 +121,8 @@ main {
     background-size: cover;
     width: 580px;
     height: 580px;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -173,4 +175,25 @@ h2 {
     justify-content: center;
     text-align: center;
     gap: 20px
+}
+
+.programinfo {
+    margin-top: auto;
+    padding: 30px;
+}
+
+.programinfo h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.6;
+    font-weight: 700;
+    color: #fff;
+}
+
+.programinfo p {
+    font-size: 15px;
+    color: #fff;
+    word-wrap: normal;
+    width: 50%;
+    
 }
