@@ -109,8 +109,12 @@
     height: 12px;
 }
 
-
 main {
+    display: flex;
+    flex-direction: column;
+}
+
+.basic {
     display: flex;
     justify-content: center;
 }
@@ -138,7 +142,7 @@ main {
     padding: 100px 0;
 }
 
-.basic {
+.basic__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -196,4 +200,23 @@ h2 {
     word-wrap: normal;
     width: 50%;
     
+}
+
+.why__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.why {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.benefits ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
 }
