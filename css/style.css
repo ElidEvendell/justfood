@@ -1,27 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Navigo;
+    font-family: 'Navigo';
     box-sizing: border-box;
 }
 
 :root {
     --basic-gap: 20px;
     --container-width: 1280px;
-}
-
-@font-face {
-    font-family: Navigo;
-    src: url(navigo/Navigo-Black.woff2);
-    format: ('woff2');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: NavigoBold;
-    src: url(navigo/Navigo-Bold.woff2);
-    format: ('woff2');
-    font-weight: 800;
 }
 
 .container {
@@ -115,9 +101,9 @@
     font-weight: 600;
 }
 
-.header__top svg {
-    height: 15px;
-    width: 15px;
+header svg {
+    height: 14px;
+    width: 14px;
 }
 
 main {
@@ -132,10 +118,16 @@ main {
 
 .left {
     display: flex;
+    position: relative;
 }
 
 .left img {
     overflow: hidden;
+    display: none;
+}
+
+#firstImg {
+    display: block;
 }
 
 .right {
@@ -197,7 +189,7 @@ h2 {
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     padding: 30px;
     z-index: 999;
 }
@@ -241,20 +233,6 @@ h2 {
     display: none;
 }
 
-.buttonGroup {
-    bottom: 0;
-    z-index: 1001;
-}
-#nextBtn, #prevBtn {
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-#nextBtn:hover, #prevBtn:hover {
-    background-color: #b1b0b0;
-}
-
 .sect {
     display: flex;
     flex-direction: column;
@@ -262,14 +240,26 @@ h2 {
 }
 
 #firstBlock, #secondBlock, #thirdBlock {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
+    background-color: aliceblue;
+    z-index: 1001;
+    border-radius: 50%;
+}
+
+#firstBlock {
+    width: 24px;
+    height: 24px;
     background-color: #FF5900;
-    z-index: 1000;
 }
 
 .paginator {
     display: flex;
-    flex-direction: row;
+    gap: 16px;
     justify-content: space-between;
+    align-items: center;
+}
+
+#secondH3, #secondInfo, #thirdH3, #thirdInfo {
+    display: none;
 }
