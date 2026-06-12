@@ -1,8 +1,76 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Navigo';
+    font-family: 'Navigo', 'Arial', sans-serif;
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Navigo';
+    src: url('../font/Navigo-Thin.woff2') format('woff2'),
+         url('../font/Navigo-Thin.woff') format('woff');
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Navigo';
+    src: url('../font/Navigo-ExtraLight.woff2') format('woff2'),
+         url('../font/Navigo-ExtraLight.woff') format('woff');
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Navigo';
+    src: url('../font/Navigo-Light.woff2') format('woff2'),
+         url('../font/Navigo-Light.woff') format('woff');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Navigo';
+    src: url('../font/Navigo-Regular.woff2') format('woff2'),
+         url('../font/Navigo-Regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Navigo';
+    src: url('../font/Navigo-Medium.woff2') format('woff2'),
+         url('../font/Navigo-Medium.woff') format('woff');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Navigo';
+    src: url('../font/Navigo-Bold.woff2') format('woff2'),
+         url('../font/Navigo-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Navigo';
+    src: url('../font/Navigo-Black.woff2') format('woff2'),
+         url('../font/Navigo-Black.woff') format('woff');
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
 }
 
 :root {
@@ -37,6 +105,12 @@
     gap: 7px;
 }
 
+.header__top ul li {
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
 .header__bottom__wrapper {
     display: flex;
     justify-content: center;
@@ -66,6 +140,8 @@
 }
 
 .nav a {
+    font-weight: 400;
+    font-size: 14px;
     text-decoration: none;
     color: black;
 }
@@ -97,8 +173,8 @@
 }
 
 .phone {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 header svg {
@@ -159,21 +235,25 @@ main {
 h2 {
     word-wrap: normal;
     text-align: center;
-    font-size: 72px;
-    font-weight: 500;
+    font-size: 70px;
+    font-weight: 700;
 }
 
 .bold {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .selectBtn {
     background-color: #FF5900;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     padding: 16px 32px;
     border: none;
     text-transform: uppercase;
+}
+
+.selectBtn:hover {
+    background-color: #fc7830;
 }
 
 .textBlock {
@@ -182,6 +262,15 @@ h2 {
     justify-content: center;
     text-align: center;
     gap: 20px
+}
+
+.textBlock h2 {
+    font-weight: 400;
+}
+
+.textBlock p {
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .left__bottom {
@@ -198,7 +287,7 @@ h2 {
     text-transform: uppercase;
     font-size: 12px;
     opacity: 0.6;
-    font-weight: 700;
+    font-weight: 500;
     color: #fff;
 }
 
@@ -206,7 +295,9 @@ h2 {
     font-size: 15px;
     color: #fff;
     word-wrap: normal;
-    width: 50%;
+    font-weight: 400;
+    width: calc(var(--container-width)*0.4);
+
     
 }
 
@@ -222,11 +313,26 @@ h2 {
     gap: 20px;
 }
 
+.why h2 {
+    font-size: 48px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
 .benefits ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     min-width: var(--container-width);
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit svg {
+    align-self: center;
 }
 
 #second, #third {
@@ -240,20 +346,26 @@ h2 {
 }
 
 #firstBlock, #secondBlock, #thirdBlock {
-    width: 16px;
-    height: 16px;
+    width: 8px;
+    height: 8px;
     background-color: aliceblue;
     z-index: 1001;
     border-radius: 50%;
 }
 
 #firstBlock {
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
     background-color: #FF5900;
 }
 
+.paginator-wrapper {
+    position: relative;
+}
+
 .paginator {
+    position: absolute;
+    bottom: 0;
     display: flex;
     gap: 16px;
     justify-content: space-between;
