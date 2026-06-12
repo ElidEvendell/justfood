@@ -3,6 +3,10 @@ const prevBtn = document.getElementById("prevBtn");
 let number = 0;
 const masImg = ["firstImg", "secondImg", "thirdImg"];
 const masPag = ["firstBlock", "secondBlock", "thirdBlock"];
+const masTitle = ["Программа FIT, ужин", "Программа FIT, завтрак", "Программа FIT, обед"];
+const masInfo = ["Индейка в сладком чили запечённая, гречка отварная, печёный помидор", "Овсяноблин с творожным сыром и ягодным топпингом", "Куриное филе с томатным салатом и бурым рисом"];
+const dishTitle = document.getElementById('dishTitle')
+const dishInfo = document.getElementById('dishInfo')
 
 const nextImgChange = () => {
     let lastImg = document.getElementById(masImg[number]);
@@ -16,10 +20,12 @@ const nextImgChange = () => {
     lastBlock.style.backgroundColor = "aliceblue";
     newBlock.style.backgroundColor = "#FF5900";
 
-    lastBlock.style.width = "16px";
-    lastBlock.style.height = "16px";
-    newBlock.style.width = "24px";
-    newBlock.style.height = "24px";
+    lastBlock.style.width = "8px";
+    lastBlock.style.height = "8px";
+    newBlock.style.width = "15px";
+    newBlock.style.height = "15px";
+    dishTitle.textContent = masTitle[number];
+    dishInfo.textContent = masInfo[number];
 }
 
 
@@ -58,10 +64,12 @@ document.querySelectorAll(".block").forEach((el) =>
     lastBlock.style.backgroundColor = "aliceblue";
     newBlock.style.backgroundColor = "#FF5900";
 
-    lastBlock.style.width = "16px";
-    lastBlock.style.height = "16px";
-    newBlock.style.width = "24px";
-    newBlock.style.height = "24px";
+    lastBlock.style.width = "8px";
+    lastBlock.style.height = "8px";
+    newBlock.style.width = "15px";
+    newBlock.style.height = "15px";
+    dishTitle.textContent = masTitle[number];
+    dishInfo.textContent = masInfo[number];
     intervalId = setInterval(() => {
         let lastImg = document.getElementById(masImg[number]);
         let lastBlock = document.getElementById(masPag[number]);
@@ -74,10 +82,10 @@ document.querySelectorAll(".block").forEach((el) =>
         lastBlock.style.backgroundColor = "aliceblue";
         newBlock.style.backgroundColor = "#FF5900";
 
-        lastBlock.style.width = "16px";
-        lastBlock.style.height = "16px";
-        newBlock.style.width = "24px";
-        newBlock.style.height = "24px";
+        lastBlock.style.width = "8px";
+        lastBlock.style.height = "8px";
+        newBlock.style.width = "15px";
+        newBlock.style.height = "15px";
         console.log(1)}, 3000)
   }),
 );
