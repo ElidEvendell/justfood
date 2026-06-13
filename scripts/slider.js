@@ -8,7 +8,7 @@ const masInfo = ["Индейка в сладком чили запечённая
 const dishTitle = document.getElementById('dishTitle')
 const dishInfo = document.getElementById('dishInfo')
 
-const nextImgChange = () => {
+const slideChange = () => {
     let lastImg = document.getElementById(masImg[number]);
     let lastBlock = document.getElementById(masPag[number]);
     number<2 ? number++ : number = 0;
@@ -17,26 +17,14 @@ const nextImgChange = () => {
     lastImg.style.display = "none";
     newImg.style.display = "block";
 
-    lastBlock.style.backgroundColor = "aliceblue";
-    newBlock.style.backgroundColor = "#FF5900";
-
-    lastBlock.style.width = "8px";
-    lastBlock.style.height = "8px";
-    newBlock.style.width = "15px";
-    newBlock.style.height = "15px";
+    lastBlock.querySelector('img').src = 'img/Ellipse 3.2.svg';
+    newBlock.querySelector('img').src = 'img/Group 64.svg';
     dishTitle.textContent = masTitle[number];
     dishInfo.textContent = masInfo[number];
 }
 
-
-
-for (let i = 1; i < masImg.length; i++) {
-  document.getElementById(masImg[i]).style.display = "none";
-  document.getElementById(masPag[i]).style.backgroundColor = "aliceblue";
-}
-
 intervalId = setInterval(() => {
-        nextImgChange();}, 3000)
+        slideChange();}, 3000)
 
 document.querySelectorAll(".block").forEach((el) =>
   el.addEventListener("click", () => {
@@ -61,13 +49,9 @@ document.querySelectorAll(".block").forEach((el) =>
     lastImg.style.display = "none";
     newImg.style.display = "block";
 
-    lastBlock.style.backgroundColor = "aliceblue";
-    newBlock.style.backgroundColor = "#FF5900";
+    lastBlock.querySelector('img').src = 'img/Ellipse 3.2.svg';
+    newBlock.querySelector('img').src = 'img/Group 64.svg';
 
-    lastBlock.style.width = "8px";
-    lastBlock.style.height = "8px";
-    newBlock.style.width = "15px";
-    newBlock.style.height = "15px";
     dishTitle.textContent = masTitle[number];
     dishInfo.textContent = masInfo[number];
     intervalId = setInterval(() => {
@@ -79,13 +63,11 @@ document.querySelectorAll(".block").forEach((el) =>
         lastImg.style.display = "none";
         newImg.style.display = "block";
 
-        lastBlock.style.backgroundColor = "aliceblue";
-        newBlock.style.backgroundColor = "#FF5900";
-
-        lastBlock.style.width = "8px";
-        lastBlock.style.height = "8px";
-        newBlock.style.width = "15px";
-        newBlock.style.height = "15px";
-        console.log(1)}, 3000)
+        lastBlock.querySelector('img').src = 'img/Ellipse 3.2.svg';
+        newBlock.querySelector('img').src = 'img/Group 64.svg';
+        
+        dishTitle.textContent = masTitle[number];
+        dishInfo.textContent = masInfo[number];
+        }, 3000)
   }),
 );
