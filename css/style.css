@@ -356,13 +356,14 @@ h2 {
 }
 
 .benefits ul {
+    width: var(--container-width);
     list-style: none;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    min-width: var(--container-width);
 }
 
 .benefit li {
+    text-align: center;
     font-size: var(--fs-md-minus);
 }
 
@@ -400,7 +401,7 @@ h2 {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     :root {
         --basic-gap: 10px;
         --container-width: 780px;
