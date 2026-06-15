@@ -12,8 +12,8 @@ const slideChange = () => {
     let lastImg = document.getElementById(masImg[number]);
     let lastBlock = document.getElementById(masPag[number]);
     number<2 ? number++ : number = 0;
-    newImg = document.getElementById(masImg[number]);
-    newBlock = document.getElementById(masPag[number]);
+    let newImg = document.getElementById(masImg[number]);
+    let newBlock = document.getElementById(masPag[number]);
     lastImg.style.display = "none";
     newImg.style.display = "block";
 
@@ -23,7 +23,7 @@ const slideChange = () => {
     dishInfo.textContent = masInfo[number];
 }
 
-intervalId = setInterval(() => {
+let intervalId = setInterval(() => {
         slideChange();}, 3000)
 
 document.querySelectorAll(".block").forEach((el) =>
@@ -54,6 +54,7 @@ document.querySelectorAll(".block").forEach((el) =>
 
     dishTitle.textContent = masTitle[number];
     dishInfo.textContent = masInfo[number];
+    
     intervalId = setInterval(() => {
         let lastImg = document.getElementById(masImg[number]);
         let lastBlock = document.getElementById(masPag[number]);
@@ -71,3 +72,8 @@ document.querySelectorAll(".block").forEach((el) =>
         }, 3000)
   }),
 );
+
+document.querySelectorAll(".block").forEach(el => {
+  el.addEventListener("mouseenter", () => clearInterval(intervalId));
+  el.addEventListener("mouseleave", () => {clearInterval(intervalId); intervalId = setInterval(() => {slideChange();}, 3000)})
+})
