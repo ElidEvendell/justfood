@@ -14,11 +14,14 @@ const slideChange = () => {
     number<2 ? number++ : number = 0;
     let newImg = document.getElementById(masImg[number]);
     let newBlock = document.getElementById(masPag[number]);
-    lastImg.style.display = "none";
-    newImg.style.display = "block";
+    lastImg.classList.remove('isVisible');
+    newImg.classList.add('isVisible');
 
-    lastBlock.querySelector('img').src = 'img/Ellipse 3.2.svg';
-    newBlock.querySelector('img').src = 'img/Group 64.svg';
+    lastBlock.querySelector('div').classList.remove('bigSector');
+    lastBlock.style.backgroundColor = 'transparent';
+    newBlock.querySelector('div').classList.add('bigSector');
+    newBlock.style.backgroundColor = '#dadada';
+
     dishTitle.textContent = masTitle[number];
     dishInfo.textContent = masInfo[number];
 }
@@ -46,11 +49,13 @@ document.querySelectorAll(".block").forEach((el) =>
 
     let newImg = document.getElementById(masImg[number]);
     let newBlock = document.getElementById(masPag[number]);
-    lastImg.style.display = "none";
-    newImg.style.display = "block";
+    lastImg.classList.remove('isVisible');
+    newImg.classList.add('isVisible');
 
-    lastBlock.querySelector('img').src = 'img/Ellipse 3.2.svg';
-    newBlock.querySelector('img').src = 'img/Group 64.svg';
+    lastBlock.querySelector('div').classList.remove('bigSector');
+    lastBlock.style.backgroundColor = 'transparent';
+    newBlock.querySelector('div').classList.add('bigSector');
+    newBlock.style.backgroundColor = '#dadada';
 
     dishTitle.textContent = masTitle[number];
     dishInfo.textContent = masInfo[number];
@@ -61,11 +66,13 @@ document.querySelectorAll(".block").forEach((el) =>
         number<2 ? number++ : number = 0;
         newImg = document.getElementById(masImg[number]);
         newBlock = document.getElementById(masPag[number]);
-        lastImg.style.display = "none";
-        newImg.style.display = "block";
+        lastImg.classList.remove('isVisible');
+        newImg.classList.add('isVisible');
 
-        lastBlock.querySelector('img').src = 'img/Ellipse 3.2.svg';
-        newBlock.querySelector('img').src = 'img/Group 64.svg';
+        lastBlock.querySelector('div').classList.remove('bigSector');
+        lastBlock.style.backgroundColor = 'transparent';
+        newBlock.querySelector('div').classList.add('bigSector');
+        newBlock.style.backgroundColor = '#dadada';
         
         dishTitle.textContent = masTitle[number];
         dishInfo.textContent = masInfo[number];
