@@ -210,18 +210,52 @@ main {
 }
 
 .left {
+    position: relative;
     display: flex;
     position: relative;
 }
 
-.left img {
+.left>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    object-fit: cover;
     overflow: hidden;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-#firstImg {
-    display: block;
+.left img.isVisible {
+    opacity: 1;
+    visibility: visible;
 }
+
+.smallSector {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.bigSector {
+  --v: 75; 
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  clip-path: shape(from top, arc to calc(50% + 50%*sin(var(--v)*3.6deg)) calc(50% - 50%*cos(var(--v)*3.6deg)) of 50% large cw, line to center);
+  background-color: #ffffff;
+}
+
+#firstBlock {
+    background-color: #dadada;
+    width: 16px;
+}
+
 
 .right {
     background-color: #E8E7E3;
@@ -329,13 +363,22 @@ h2 {
     align-items: center;
 }
 
-.paginator img {
-    display: block;
-}
-
 .block {
     z-index: 1001;
+    opacity: 0.8;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1001;
+    cursor: pointer;
+    background-color: transparent;
 }
+
+
+
 
 .why__wrapper {
     display: flex;
@@ -376,15 +419,17 @@ h2 {
     align-self: center;
 }
 
-#secondImg, #thirdImg {
-    display: none;
-}
-
 .sect {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
+button {
+    cursor: pointer;
+}
+
+
 
 @media (max-width: 1280px) {
     :root {
