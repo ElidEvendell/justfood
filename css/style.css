@@ -377,7 +377,14 @@ h2 {
     background-color: transparent;
 }
 
+.header__top a {
+    text-decoration: none;
+    color: #ffffff;
+}
 
+a {
+    cursor: pointer;
+}
 
 
 .why__wrapper {
