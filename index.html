@@ -641,35 +641,41 @@
       <div class="container">
         <div class="selection container">
           <section class="settings">
-            <h3>Выберите параметры:</h3>
-            <p>Программа:</p>
+            <h3 class="settings__title">Выберите параметры:</h3>
+            <div class="settings__block">
+              <p class="settings__desc">Программа:</p>
+              <button><span class="firstPartOfBtn">ПОД</span>ОБРАТЬ</button>
+            </div>
             <ul class="programList">
-              <div class="program">
-                <img src="" alt="" />
-                <div>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke="#7a7a7a"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
+              <div class="program chosenProgram">
+                <div class="program__img">
+                  <h4 class="program__title">SPORT</h4>
+                  <p class="program__desc">Спортивное питание</p>
+                  <img src="img/SPORT.png" alt="" />
+                </div>
+                <div class="program__footer">
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="13"
+                      viewBox="0 0 10 13"
+                      fill="none"
+                    >
                       <path
-                        d="M3 10H21M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z"
-                        stroke="#7a7a7a"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        d="M9.21387 2.90479V10.4995C9.21387 11.3279 8.54229 11.9995 7.71387 11.9995H2C1.17157 1
+1.9995 0.5 11.3279 0.5 10.4995V2.90479H9.21387Z"
+                        stroke="#5C5C5A"
                       ></path>
-                    </g>
-                  </svg>
-                  <p>пн-сб - ₽</p>
+                      <path
+                        d="M7.04638 4.5V1.5C7.04638 0.947715 6.59867 0.5 6.04638 0.5H3.66547C3.11318 0.5 2.6654
+7 0.947715 2.66547 1.5V4.5"
+                        stroke="#5C5C5A"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                    пн-сб - <span class="programPrice">5000</span>₽
+                  </p>
                   <svg
                     fill="#dadada"
                     version="1.1"
@@ -704,31 +710,34 @@
                 </div>
               </div>
               <div class="program">
-                <img src="" alt="" />
-                <div>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke="#7a7a7a"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
+                <div class="program__img">
+                  <h4 class="program__title">FIT</h4>
+                  <p class="program__desc">Фитнес питание</p>
+                  <img src="img/FIT.png" alt="" />
+                </div>
+                <div class="program__footer">
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="13"
+                      viewBox="0 0 10 13"
+                      fill="none"
+                    >
                       <path
-                        d="M3 10H21M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z"
-                        stroke="#7a7a7a"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        d="M9.21387 2.90479V10.4995C9.21387 11.3279 8.54229 11.9995 7.71387 11.9995H2C1.17157 1
+1.9995 0.5 11.3279 0.5 10.4995V2.90479H9.21387Z"
+                        stroke="#5C5C5A"
                       ></path>
-                    </g>
-                  </svg>
-                  <p>пн-пт, сб, вс - ₽₽</p>
+                      <path
+                        d="M7.04638 4.5V1.5C7.04638 0.947715 6.59867 0.5 6.04638 0.5H3.66547C3.11318 0.5 2.6654
+7 0.947715 2.66547 1.5V4.5"
+                        stroke="#5C5C5A"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                    пн-пт, сб, вс - <span class="programPrice">6000</span>₽
+                  </p>
                   <svg
                     fill="#dadada"
                     version="1.1"
@@ -763,31 +772,38 @@
                 </div>
               </div>
               <div class="program">
-                <img src="" alt="" />
-                <div>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    stroke="#7a7a7a"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
+                <div class="program__img">
+                  <h4 class="program__title">LIFE</h4>
+                  <p class="program__desc">На каждый день</p>
+                  <img src="img/LIFE.png" alt="" />
+                  <div class="soon__block">
+                    <p class="soon">СКОРО</p>
+                    <div class="soon__triangle"></div>
+                  </div>
+                </div>
+                <div class="program__footer">
+                  <p>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="13"
+                      viewBox="0 0 10 13"
+                      fill="none"
+                    >
                       <path
-                        d="M3 10H21M7 3V5M17 3V5M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z"
-                        stroke="#7a7a7a"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        d="M9.21387 2.90479V10.4995C9.21387 11.3279 8.54229 11.9995 7.71387 11.9995H2C1.17157 1
+1.9995 0.5 11.3279 0.5 10.4995V2.90479H9.21387Z"
+                        stroke="#5C5C5A"
                       ></path>
-                    </g>
-                  </svg>
-                  <p>пн-вс - ₽₽₽</p>
+                      <path
+                        d="M7.04638 4.5V1.5C7.04638 0.947715 6.59867 0.5 6.04638 0.5H3.66547C3.11318 0.5 2.6654
+7 0.947715 2.66547 1.5V4.5"
+                        stroke="#5C5C5A"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                    пн-вс - <span class="programPrice">7000</span>₽
+                  </p>
                   <svg
                     fill="#dadada"
                     version="1.1"
@@ -824,27 +840,62 @@
             </ul>
             <p>Дневная калорийность:</p>
             <ul class="calories">
-              <button>1200</button>
-              <button>1500</button>
-              <button>2000</button>
-              <button>2500</button>
+              <button class="caloriesBtn chosen">1200</button>
+              <button class="caloriesBtn">1500</button>
+              <button class="caloriesBtn">2000</button>
+              <button class="caloriesBtn">2500</button>
             </ul>
-            <p>Продолжительность:</p>
-            <p class="whichDays">Питание с понедельника по субботу</p>
+            <div class="duration__title">
+              <p>Продолжительность:</p>
+              <p class="whichDays">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                >
+                  == $0
+                  <circle cx="7.5" cy="7.5" r="7.5" fill="black"></circle>
+                  <path
+                    d="M8.3288 9.6709V11.0498H6.94989V9.6709H8.32
+88ZM8.31024 3.9502L8.30927 4.00098L8.21649 8.91016L
+8.21552 8.95898H7.06219L7.06122 8.91016L6.96844 4.0
+0098L6.96747 3.9502H8.31024Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="0.1"
+                  ></path>
+                </svg>
+                Питание с понедельника по субботу
+              </p>
+              <div class="infoDur">
+                <div>
+                  <h5>Информация о продолжительности</h5>
+                  <p>Не знаю, что писать</p>
+                </div>
+                <img
+                  height="30px"
+                  src="https://upload.wikimedia.org/wikipedia/ru/thumb/a/a3/%D0%A3%D0%BF%D0%BE%D1%80%D0%BE%D1%82%D1%8B%D0%B9_%D0%BB%D0%B8%D1%81.jpeg/250px-%D0%A3%D0%BF%D0%BE%D1%80%D0%BE%D1%82%D1%8B%D0%B9_%D0%BB%D0%B8%D1%81.jpeg"
+                  alt=""
+                />
+              </div>
+            </div>
+
             <ul class="duration">
-              <div>
+              <div class="durationItem chosen">
                 <p>1 неделя</p>
                 <p class="discount">- 5%</p>
               </div>
-              <div>
+              <div class="durationItem">
                 <p>2 недели</p>
                 <p class="discount">- 10%</p>
               </div>
-              <div>
+              <div class="durationItem">
                 <p>3 недели</p>
                 <p class="discount">- 15%</p>
               </div>
-              <div>
+              <div class="durationItem">
                 <p>4 недели</p>
                 <p class="discount"></p>
               </div>
@@ -856,22 +907,96 @@
               <h3 class="result__name"></h3>
               <p><span class="price"></span> ₽/день</p>
             </div>
-            <p>Пример меню на день:</p>
-            <ul>
-              <img src="" alt="Dish 1" />
-              <img src="" alt="Dish 2" />
-              <img src="" alt="Dish 3" />
-              <img src="" alt="Dish 4" />
-              <img src="" alt="Dish 5" />
-              <img src="" alt="Dish 6" />
-              <img src="" alt="Dish 7" />
+            <p class="exampleMenu">Пример меню на день:</p>
+            <ul class="dailyMenu">
+              <div class="dailyMenu__item">
+                <img src="img/box1.png" alt="Dish 1" />
+                <div class="color-overlay"></div>
+              </div>
+              <div class="dailyMenu__item">
+                <img src="img/box2.png" alt="Dish 2" />
+                <div class="color-overlay"></div>
+              </div>
+              <div class="dailyMenu__item">
+                <img src="img/box3.png" alt="Dish 3" />
+                <div class="color-overlay"></div>
+              </div>
+              <div class="dailyMenu__item">
+                <img src="img/box4.png" alt="Dish 4" />
+                <div class="color-overlay"></div>
+              </div>
+              <div class="dailyMenu__item">
+                <img src="img/box5.png" alt="Dish 5" />
+                <div class="color-overlay"></div>
+              </div>
+              <div class="dailyMenu__item">
+                <img src="img/box1.png" alt="Dish 6" />
+                <div class="color-overlay"></div>
+              </div>
+              <div class="dailyMenu__item">
+                <img src="img/box3.png" alt="Dish 7" />
+                <div class="color-overlay"></div>
+              </div>
             </ul>
             <hr />
-            <p><input type="checkbox" /> У меня есть промокод</p>
+            <p class="promo">
+              <button class="promo__btn">
+                <svg
+                  class="iconNotClicked"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                >
+                  <rect
+                    opacity="0.3"
+                    x="0.5"
+                    y="0.5"
+                    width="14"
+                    height="14"
+                    rx="7"
+                    stroke="black"
+                  ></rect>
+                </svg>
+                <svg
+                  class="iconClicked"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="#000"
+                  xmlns="http://w3.org"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M8 12.5L10.5 15L16 9"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              У меня есть промокод
+            </p>
             <hr />
-            <p>Итого <span class="howMuchDays"></span>дней/день</p>
-            <p><span class="badPrice"></span>₽</p>
-            <p><span class="goodPrice"></span>₽</p>
+            <div class="result__block">
+              <p>
+                Итого <span class="daysCnt"></span>
+                <span class="days">дней</span>:
+              </p>
+              <div class="result__price">
+                <p><span class="badPrice"></span></p>
+                <p><span class="goodPrice"></span></p>
+              </div>
+            </div>
+
             <button class="secOrderBtn">Заказать</button>
           </section>
         </div>
