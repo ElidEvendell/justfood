@@ -394,16 +394,12 @@ a {
   cursor: pointer;
 }
 
-.why__wrapper {
-  display: flex;
-  justify-content: center;
-}
-
 .why {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: var(--basic-gap);
+  margin-bottom: 20px;
 }
 
 .why h2 {
@@ -446,12 +442,116 @@ button {
 .settings {
   padding: 20px;
   width: 60%;
-  background-color: #ff5900;
+  background-color: #ffffff;
+}
+
+.settings__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.settings p {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.settings__block button {
+  font-size: 12px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.4);
+  width: 100px;
+  height: 32px;
+  text-align: center;
+  background-color: #fff;
+
+}
+
+.settings__block button {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100px;
+  height: 32px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.settings__block button::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -22px;
+  width: 64px;
+  height: 64px;
+  background: #FF5900;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.firstPartOfBtn {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.infoDur {
+  background-color: #fff;
+  position: absolute;
+  top: -40px;
+  left: 400px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+  width: 100px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.whichDays:hover + .infoDur {
+  display: flex;
+}
+
+.infoDur h5 {
+  font-size: 5px;
+}
+
+.infoDur p {
+  font-size: 4px;
 }
 
 .settings svg {
   width: 20px;
   height: 20px;
+}
+
+.settings__title {
+  font-size: 30px;
+}
+
+.iconClicked {
+  display: none;
+}
+
+.promo__btn {
+  background: none;
+  border: none;
+}
+
+.promo__btn.is-active .iconNotClicked {
+  display: none;
+}
+
+.promo__btn.is-active .iconClicked {
+  display: block;
 }
 
 .programList {
@@ -461,17 +561,94 @@ button {
   width: 100%;
 }
 
-.program>div {
+.program__footer {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.program {
+
+.program__img {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: calc(var(--container-width)*0.6*0.305);
+  aspect-ratio: 20/11;
+  background-color: #9FC2C7;
+  border-radius: 5px 5px 0 0;
+}
+
+.program__img img {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.program__title {
+  background-color: #DBFAFF;
+  width: 85px;
+  height: 30px;
+  text-align: center;
+  color: #598389;
+  font-size: 17px;
+  border-radius: 3px;
+  margin: 15px;
+}
+
+.program__img>.program__desc {
+  margin-left: 15px;
+  width: 40%; 
+  color: #DBFAFF;
+  font-size: 14px;
+}
+
+.program__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  padding: 3px;
+  aspect-ratio: 5/1;
+  background-color: #fff;
+  transition: transform 7s ease-out;
 }
 
 .program p {
-  color: #808080;
+  font-size: 13px;
+  color: #5C5C5A;
+}
+
+.program__img>.soon__block {
+  position: absolute;
+  right: -8px;
+  bottom: -12px;
+  z-index: 900;
+}
+
+.soon__block>.soon {
+  background-color: #FF5900;
+  padding: 6px 12px;
+  font-size: var(--fw-medium);
+  color: #fff;
+} 
+
+.soon__triangle {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  bottom: 55px;
+  z-index: 850;
+  width: 8px;
+  height: 4px;
+  background-color: #B6470C; /* цвет треугольника */
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%); /* координаты вершин */
+}
+
+.chosenProgram {
+  box-shadow: 0px 4px 10px 3px #cfcfcf;
+  transform: translateY(-10px);
 }
 
 .selection {
@@ -481,21 +658,56 @@ button {
 }
 
 .result {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 40px;
-  background-color: rgb(182, 214, 216);
+  background-color: rgba(159, 194, 199, 0.5);
   width: 40%;
+}
+
+.result__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.result__price {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+hr {
+  background-color: #000;
+  height: 1px;
+  border: none;
+  opacity: 0.1;
+}
+
+.badPrice {
+  text-decoration: line-through;
+  color: #000000;
+  opacity: 0.3;
+  font-size: 14px;
+  font-weight: var(--fw-regular);
+}
+
+.goodPrice {
+  color: #000000;
+  font-size: 18px;
+  font-weight: var(--fw-bold);
 }
 
 .calories {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.calories button {
-  width: calc(var(--container-width)*0.6*0.215);
-}
+
 
 .duration {
   width: 100%;
@@ -504,20 +716,139 @@ button {
   justify-content: space-between;
 }
 
-.duration div {
+.durationItem {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #818181;
-  width: calc(var(--container-width)*0.6*0.215);
+  align-items: center;
+  padding: 5px;
+}
+
+.duration__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.duration__title {
+  position: relative;
+}
+
+.whichDays {
+  opacity: 0.5;
+  text-align: center;
+  font-size: 15px;
+}
+
+.whichDays svg {
+  width: 15px;
+  height: 15px;
 }
 
 .secOrderBtn {
   width: 100%;
-  padding: 8px 0;
+  padding: 16px 0;
   text-transform: uppercase;
   background-color: #000;
   color: #fff;
+  border: none;
+}
+
+.dailyMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dailyMenu__item {
+  width: calc((var(--container-width)*0.4)*0.1);
+  object-fit: cover;
+  aspect-ratio: 43/60;
+  position: relative;
+}
+
+.color-overlay {
+  height: 94%;
+  width: 100%;
+  background-color: #FF5900;
+  opacity: 0;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3 ease;
+  z-index: 1001;
+}
+
+.dailyMenu__item:hover .color-overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.dailyMenu img {
+  width: 100%;
+}
+
+.exampleMenu {
+  color: #353535;
+  opacity: 0.6;
+}
+
+.program__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease-out, box;
+  gap: 10px;
+  border: 1px solid #E8E7E3;
+  border-radius: 5px;
+}
+
+.program div {
+  gap: 10px;
+}
+
+.discount {
+  color: #FF975F;
+}
+
+.caloriesBtn:hover, .durationItem:hover {
+  cursor: pointer;
+  background-color: #ebeaea;
+}
+
+.caloriesBtn, .durationItem {
+  border: 1px solid #EBE8E8;
+  width: calc(var(--container-width)*0.6*0.25);
+  aspect-ratio: 13/5;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.caloriesBtn:first-child, .durationItem:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.caloriesBtn:last-child, .durationItem:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.chosen {
+  background-color: #5C5C5A;
+  color: #fff;
+  border: none;
+}
+
+.chosen:hover {
+  background-color: #81817d;
 }
 
 @media (max-width: 1280px) {
