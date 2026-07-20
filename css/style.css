@@ -565,6 +565,11 @@ button {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  text-align: center;
+}
+
+.program__footer svg:first-child {
+  height: 12px;
 }
 
 
@@ -572,6 +577,7 @@ button {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
   width: calc(var(--container-width)*0.6*0.305);
   aspect-ratio: 20/11;
@@ -586,21 +592,53 @@ button {
   object-fit: cover;
 }
 
-.program__title {
+.sport {
+  background-color: #9FC2C7;
+}
+
+.sport h4 {
   background-color: #DBFAFF;
-  width: 85px;
-  height: 30px;
-  text-align: center;
   color: #598389;
-  font-size: 17px;
+}
+
+.program__img.sport p {
+  color: #DBFAFF;
+}
+
+.fit, .life {
+  background-color: #EDEDED;
+}
+
+.fit h4 {
+  background-color: #D0D0D0;
+  color: rgba(92, 92, 90, 0.6);
+}
+
+.program__img.fit p {
+  color: #D0D0D0;
+}
+
+.life h4 {
+  background-color: rgba(92, 92, 90, 0.1);
+  color: rgba(92, 92, 90, 0.25)
+}
+
+.program__img.life p {
+  color: rgba(92, 92, 90, 0.25);
+}
+
+.program__title {
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
   border-radius: 3px;
   margin: 15px;
+  padding: 0 8px;
 }
 
 .program__img>.program__desc {
   margin-left: 15px;
   width: 40%; 
-  color: #DBFAFF;
   font-size: 14px;
 }
 
@@ -627,12 +665,13 @@ button {
   z-index: 900;
 }
 
-.soon__block>.soon {
+.program__img>.soon__block>.soon {
   background-color: #FF5900;
   padding: 6px 12px;
   font-size: var(--fw-medium);
   color: #fff;
 } 
+
 
 .soon__triangle {
   position: absolute;
@@ -718,6 +757,7 @@ hr {
 
 .durationItem {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   text-align: center;
   align-items: center;
