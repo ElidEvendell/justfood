@@ -793,6 +793,10 @@ hr {
   border: none;
 }
 
+.orderBtn:hover, .secOrderBtn:hover {
+  background-color: #353535;
+}
+
 .dailyMenu {
   display: flex;
   flex-direction: row;
